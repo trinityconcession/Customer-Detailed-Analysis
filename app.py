@@ -8,8 +8,8 @@ import importlib.util
 import streamlit as st
 
 
-st.set_page_config(page_title="Trinity Customer Report Generator", layout="wide")
-st.title("Trinity Customer Report Generator")
+st.set_page_config(page_title="Trinity Detailed Customer Report Generator", layout="wide")
+st.title("Trinity Detailed Customer Report Generator")
 st.write("Upload CSV → Run your Python logic → Download Excel report")
 
 # ---- Settings ----
@@ -44,7 +44,7 @@ run_btn = st.button("Generate Report")
 
 if run_btn:
     if not uploaded_csv:
-        st.error("Please upload a CSV file first.")
+        st.error("Please upload a CSV file of customer first.")
         st.stop()
 
     with st.spinner("Running report generation..."):
